@@ -1,0 +1,1036 @@
+/* funcões gerais */
+body {
+  background-color: #12002c; /* Sua cor de fundo original */
+}
+
+body.white-bg {
+  background-color: #ffffff; /* Cor de fundo branca */
+}
+
+.orbita.white-bg {
+  background-color: #ffffff;
+  border-color: #12002c;
+}
+
+.planetas.tamanho {
+  height: 30px;
+  width: 30px;
+}
+
+.orbita.ativo {
+  border-width: 0px;
+}
+
+.planetas {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  transition: transform 5s;
+  cursor: pointer;
+}
+
+.texto {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.orbita {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #12002c;
+  border-radius: 50%;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: white;
+  animation: roda 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes roda {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#sistema {
+  text-decoration: none;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+.texto2:hover {
+  transform: translateX(-10px);
+  color: #ff9070;
+}
+
+.informacao {
+  position: fixed;
+  color: white;
+  text-align: center;
+  width: 10%;
+  height: 28%;
+  top: 40%;
+  right: 0;
+  left: 10%;
+  bottom: 0;
+  font-size: 100%;
+  font-family: "Century Gothic";
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 4px;
+  transition: transform 0.5s;
+  overflow: hidden;
+  background-color: #12002c;
+}
+
+@media (max-width: 2400px) {
+  .informacao {
+    font-size: 80%;
+  }
+}
+@media (max-width: 1800px) {
+  .informacao {
+    display: none;
+  }
+}
+
+@media (min-width: 3300px) {
+  .informacao {
+    display: none;
+  }
+}
+
+.informacao:hover {
+  transform: translate(10px) translateY(-10px);
+  color: #ff9070;
+}
+
+.quadrado {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 10%;
+  height: 28%;
+  top: 40%;
+  right: 0;
+  left: 10%;
+  bottom: 0;
+  border-style: solid;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+@media (max-width: 1800px) {
+  .quadrado {
+    display: none;
+  }
+}
+
+@media (min-width: 3300px) {
+  .quadrado {
+    display: none;
+  }
+}
+
+.linha {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 4%;
+  height: 0.1%;
+  top: 0;
+  right: 0;
+  left: 5%;
+  bottom: 0;
+  margin: auto;
+}
+
+.dados {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 100px;
+  height: 1%;
+  top: 0;
+  right: 0;
+  left: 6%;
+  bottom: 5%;
+  margin: auto;
+  padding: auto;
+}
+
+@media (max-width: 1800px) {
+  .dados {
+    width: 3%;
+    height: 1%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .dados {
+    bottom: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .dados {
+    bottom: 40%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .texto {
+    display: none;
+  }
+}
+
+@media (min-width: 3300px) {
+  .texto {
+    display: none;
+  }
+}
+
+#bloco_texto {
+  padding: 10%;
+  padding-top: 15%;
+}
+
+.legenda {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  bottom: 0;
+  left: 5%;
+  border-radius: 50%;
+}
+
+@media (max-width: 1600px) {
+  .legenda {
+    display: none;
+  }
+}
+
+/* funcões sul */
+
+#sun {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ffa600;
+  transition: width 3s ease-in-out, height 3s ease-in-out;
+  z-index: 10;
+}
+
+#solt {
+  text-decoration: none;
+  position: absolute;
+  top: 26.7%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#sol_legenda {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ffa600;
+  transition: opacity 0.3s ease;
+}
+
+#sol_legenda:hover {
+  scale: 120%;
+}
+
+#sol_legenda:hover::before {
+  content: "Se torna uma estrela vermelha, consumindo Mercúrio, Venus e a Terra";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#sun.clicado {
+  background-color: #ff6a42;
+  width: 180px;
+  height: 180px;
+  animation: forma 3s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes forma {
+  0% {
+    transform: rotate(0deg) translate(-10px) rotate(0deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
+
+  30% {
+    border-top-left-radius: 60%;
+    border-top-right-radius: 80%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 90%;
+  }
+
+  50% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 80%;
+  }
+
+  70% {
+    border-top-left-radius: 80%;
+    border-top-right-radius: 60%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 80%;
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-10px) rotate(360deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
+}
+
+/* funcões mercurio */
+
+#mercurio {
+  animation: rotação1 3s linear infinite;
+  background-color: #b9b9b9;
+}
+
+@keyframes rotação1 {
+  0% {
+    transform: rotate(0deg) translate(-26px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-26px) rotate(-360deg);
+  }
+}
+
+#mercuriot {
+  text-decoration: none;
+  position: absolute;
+  top: 33.4%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linham {
+  animation: rotação1 3s linear infinite;
+}
+
+#dadosm {
+  animation: rotação1 3s linear infinite;
+}
+
+#distanciam {
+  animation: rotação1 3s linear infinite;
+  bottom: -1%;
+}
+
+#mercurio_legenda {
+  top: 60px;
+  right: 50%;
+  bottom: 10;
+  left: 0px;
+  background-color: #b9b9b9;
+}
+
+#mercurio_legenda:hover {
+  scale: 120%;
+}
+
+#mercurio_legenda:hover::before {
+  content: "Aumenta a velocidade de todos os planetas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* funcões venus */
+
+#venus {
+  background-color: #bb6900;
+  animation: rotação2 6s linear infinite;
+}
+
+#o1 {
+  width: 100px;
+  height: 100px;
+  z-index: -2;
+  animation: roda 8s linear infinite;
+}
+
+@keyframes rotação2 {
+  0% {
+    transform: rotate(0deg) translate(-52px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-52px) rotate(-360deg);
+  }
+}
+
+#venust {
+  text-decoration: none;
+  position: absolute;
+  top: 40.2%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhav {
+  animation: rotação2 6s linear infinite;
+}
+
+#dadosv {
+  animation: rotação2 6s linear infinite;
+}
+
+#distanciav {
+  animation: rotação2 6s linear infinite;
+  bottom: -1%;
+}
+
+#venus_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 120px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #bb6900;
+}
+
+#venus_legenda:hover {
+  scale: 120%;
+}
+
+#venus_legenda:hover::before {
+  content: "Deixa a pagina no modo claro";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* funcões terra e lua  */
+
+#lua {
+  height: 8px;
+  width: 8px;
+  background-color: #c3c3c3;
+  animation: rotaçãolua 9s linear infinite;
+}
+
+#terra {
+  animation: rotação3 9s linear infinite;
+  background-color: #00c8f0;
+  transition: width 3s ease-in-out, height 3s ease-in-out;
+}
+
+#o2 {
+  width: 150px;
+  height: 150px;
+  z-index: -3;
+  animation: roda 11s linear infinite;
+}
+
+@keyframes rotação3 {
+  0% {
+    transform: rotate(0deg) translate(-77px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-77px) rotate(-360deg);
+  }
+}
+
+@keyframes rotaçãolua {
+  0% {
+    transform: rotate(0deg) translate(-90px) rotate(0deg);
+    z-index: 1;
+  }
+
+  50% {
+    transform: rotate(180deg) translate(-60px) rotate(180deg);
+    z-index: -1;
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-90px) rotate(360deg);
+    z-index: -1;
+  }
+}
+
+#terrat {
+  text-decoration: none;
+  position: absolute;
+  top: 46.9%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhat {
+  animation: rotação3 9s linear infinite;
+}
+
+#dadost {
+  animation: rotação3 9s linear infinite;
+}
+
+#distanciat {
+  animation: rotação3 9s linear infinite;
+  bottom: -1%;
+}
+#terra_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 180px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #00c8f0;
+}
+
+#terra_legenda:hover {
+  scale: 120%;
+}
+
+#terra_legenda:hover::before {
+  content: "Cria um buraco negro que consome todo o sistema solar";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#lua_legenda {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 175px;
+  left: 30px;
+  border-radius: 50%;
+  background-color: #c3c3c3;
+}
+
+#lua_legenda:hover {
+  scale: 120%;
+}
+
+#lua_legenda:hover::before {
+  content: "Ignora o efeito de todos os outros planetas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#terra.clicado{
+  background-color: black;
+  height: 700px;
+  width: 700px;
+  z-index:99;
+}
+
+/* funcões marte */
+
+#marte {
+  animation: rotação4 12s linear infinite;
+  background-color: #ff4900;
+}
+
+#o3 {
+  width: 200px;
+  height: 200px;
+  z-index: -4;
+  animation: roda 13s linear infinite;
+}
+
+@keyframes rotação4 {
+  0% {
+    transform: rotate(0deg) translate(-102px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-102px) rotate(-360deg);
+  }
+}
+
+#martet {
+  text-decoration: none;
+  position: absolute;
+  top: 53.6%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhama {
+  animation: rotação4 12s linear infinite;
+}
+
+#dadosma {
+  animation: rotação4 12s linear infinite;
+}
+
+#distanciama {
+  animation: rotação4 12s linear infinite;
+  bottom: -1%;
+}
+
+#marte_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 240px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #ff4900;
+}
+
+#marte_legenda:hover {
+  scale: 120%;
+}
+
+#marte_legenda:hover::before {
+  content: "Reproduz o audio: `This is Elon Musk`";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* funcões jupiter */
+
+#jupiter {
+  animation: rotação5 15s linear infinite;
+  background-color: #bda676;
+}
+
+#o4 {
+  width: 250px;
+  height: 250px;
+  z-index: -5;
+  animation: roda 15s linear infinite;
+}
+
+@keyframes rotação5 {
+  0% {
+    transform: rotate(0deg) translate(-127px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-127px) rotate(-360deg);
+  }
+}
+
+#jupitert {
+  text-decoration: none;
+  position: absolute;
+  top: 60.3%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhaj {
+  animation: rotação5 15s linear infinite;
+}
+
+#dadosj {
+  animation: rotação5 15s linear infinite;
+}
+
+#distanciaj {
+  animation: rotação5 15s linear infinite;
+  bottom: -1%;
+}
+
+#jupiter_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 300px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #bda676;
+}
+
+#jupiter_legenda:hover {
+  scale: 120%;
+}
+
+#jupiter_legenda:hover::before {
+  content: "Aumenta o tamanho de todos os outros planetas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* funcões saturno e anel */
+#saturno {
+  animation: rotação6 18s linear infinite;
+  background-color: #ead2a1;
+}
+
+#anel {
+  width: 30px;
+  height: 6px;
+  z-index: -1;
+  border-style: solid;
+  border-color: #f5ea7e;
+  animation: rotação6 18s linear infinite;
+}
+
+#o5 {
+  width: 300px;
+  height: 300px;
+  z-index: -6;
+  animation: roda 17s linear infinite;
+}
+
+@keyframes rotação6 {
+  0% {
+    transform: rotate(0deg) translate(-152px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-152px) rotate(-360deg);
+  }
+}
+
+#saturnot {
+  text-decoration: none;
+  position: absolute;
+  top: 67%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhas {
+  animation: rotação6 18s linear infinite;
+}
+
+#dadoss {
+  animation: rotação6 18s linear infinite;
+}
+
+#distancias {
+  animation: rotação6 18s linear infinite;
+  bottom: -1%;
+}
+
+#saturno_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 360px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #ead2a1;
+}
+
+#saturno_legenda:hover {
+  scale: 120%;
+}
+
+#saturno_legenda:hover::before {
+  content: "Para a animacão de todas as orbitas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#anel_legenda {
+  position: absolute;
+  width: 60px;
+  height: 12px;
+  z-index: -1;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #f5ea7e;
+  top: 365px;
+  left: -17px;
+  border-radius: 50%;
+}
+
+#anel_legenda:hover {
+  scale: 120%;
+}
+
+#anel_legenda:hover::before {
+  content: "Apaga todas as orbitas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* funcões urano */
+#uranus {
+  animation: rotação7 21s linear infinite;
+  background-color: #261de6;
+}
+
+#o6 {
+  width: 350px;
+  height: 350px;
+  z-index: -7;
+  animation: roda 19s linear infinite;
+}
+
+@keyframes rotação7 {
+  0% {
+    transform: rotate(0deg) translate(-177px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-177px) rotate(-360deg);
+  }
+}
+
+#uranot {
+  text-decoration: none;
+  position: absolute;
+  top: 73.7%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhau {
+  animation: rotação7 21s linear infinite;
+}
+
+#dadosu {
+  animation: rotação7 21s linear infinite;
+}
+
+#distanciau {
+  animation: rotação7 21s linear infinite;
+  bottom: -1%;
+}
+
+#urano_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 420px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #261de6;
+}
+
+#urano_legenda:hover {
+  scale: 120%;
+}
+
+#urano_legenda:hover::before {
+  content: "Reduz a velocidade de todos os outros planetas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/*funcões netuno */
+
+#netuno {
+  animation: rotação8 24s linear infinite;
+  background-color: #938eff;
+}
+
+#o7 {
+  width: 400px;
+  height: 400px;
+  z-index: -8;
+  animation: roda 21s linear infinite;
+}
+
+@keyframes rotação8 {
+  0% {
+    transform: rotate(0deg) translate(-202px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-202px) rotate(-360deg);
+  }
+}
+
+#netunot {
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s;
+}
+
+#linhan {
+  animation: rotação8 24s linear infinite;
+}
+
+#dadosn {
+  animation: rotação8 24s linear infinite;
+}
+
+#distancian {
+  animation: rotação8 24s linear infinite;
+  bottom: -1%;
+}
+
+#netuno_legenda {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 480px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #938eff;
+}
+
+#netuno_legenda:hover {
+  scale: 120%;
+}
+
+#netuno_legenda:hover::before {
+  content: "Pausa a animacão de todos os outros planetas";
+  position: absolute;
+  top: 100%;
+  left: 150%;
+  transform: translateY(-100%);
+  padding: 5px;
+  background-color: #12002c;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
