@@ -26,18 +26,24 @@ Clique na imagem acima para assistir ao vídeo de demonstração no YouTube.
 
 ```bash
 git clone https://github.com/FeltrinLM/Sistema-solar
+``` 
 
 2. Abra o arquivo index.html no navegador de sua preferência.
 
-📁 Estrutura básica do projeto
+--- 
 
+## 📁 Estrutura básica do projeto
+
+```
 Sistema-solar/
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
+```
 
-👨‍💻 Autor
+--- 
 
-Lorenzo Feltrin
-GitHub
+## 👨‍💻 Autor
+
+Lorenzo Feltrin Mendes
