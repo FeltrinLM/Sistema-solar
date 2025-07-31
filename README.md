@@ -1,49 +1,67 @@
-# 🪐 Sistema Solar Interativo
+# 🪐 Interactive Solar System
 
-Este projeto é uma simulação interativa do sistema solar, desenvolvida para fins educacionais e demonstrativos. Nele, você pode visualizar os planetas orbitando o Sol de forma animada e realista.
+This project is an interactive simulation of the solar system, developed for educational and demonstrative purposes. It allows you to visualize the planets orbiting the Sun in an animated and realistic way.
 
 ---
 
-## 🎥 Demonstração em vídeo
+## 🎥  Video Demonstration
 
 [![Assista à demonstração do projeto](https://img.youtube.com/vi/o8BluUPWNo8/hqdefault.jpg)](https://www.youtube.com/watch?v=o8BluUPWNo8)
 
-Clique na imagem acima para assistir ao vídeo de demonstração no YouTube.
+Click the image above to watch the demo video on YouTube.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 🚀 Technologies Used
 
 - HTML5 + CSS3
 - JavaScript 
-- Animações baseadas em `requestAnimationFrame`
+- Animations based on  `requestAnimationFrame`
 
 ---
 
-## 🛠️ Como executar
+## 🛠️ How to Run
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/FeltrinLM/Sistema-solar
+git clone https://github.com/FeltrinLM/Solar-System
 ``` 
 
-2. Abra o arquivo index.html no navegador de sua preferência.
+2. Open the sistema.html file in your preferred browser.
 
 --- 
 
-## 📁 Estrutura básica do projeto
+## 📁 Basic Project Structure
 
 ```
-Sistema-solar/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+Solar-System/
+├── css/
+│   ├── parar.css
+│   ├── reset.css
+│   ├── sistema.css
+│   └── sol.css
+│
+├── diretórios/
+│   ├── jupiter.html
+│   ├── marte.html
+│   ├── mercurio.html
+│   ├── netuno.html
+│   ├── saturno.html
+│   ├── sol.html
+│   ├── terra.html
+│   ├── urano.html
+│   └── venus.html
+│
+├── .gitattributes
+├── README.md
+├── sistema.html
+├── sistema.js
+└── This is Elon Musk - Meme Twitter - Tiktok (320 ...).mp4
 ```
 
 --- 
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 Lorenzo Feltrin Mendes
